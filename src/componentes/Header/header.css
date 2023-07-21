@@ -1,0 +1,29 @@
+.navBar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--bg-navBar);
+    padding: 1.3rem;
+    height: 10vh;
+}
+
+.navBar ul {
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 3rem;
+    font-size: 1.2rem;
+}
+
+.linkPage {
+    text-decoration: none;
+    color: var(--font-color);
+    box-sizing: border-box;
+    transition: 200ms all;
+}
+
+.linkPage:hover {
+    color: #2C9EC5;
+    border-bottom: 1px solid #2C9EC5;
+}
