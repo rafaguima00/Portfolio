@@ -1,0 +1,11 @@
+.linkPage {
+    text-decoration: none;
+    color: var(--font-color);
+    box-sizing: border-box;
+    transition: 200ms all;
+}
+
+.linkPage:hover {
+    color: #2C9EC5;
+    border-bottom: 1px solid #2C9EC5;
+}
