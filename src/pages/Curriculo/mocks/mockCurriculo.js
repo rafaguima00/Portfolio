@@ -15,7 +15,11 @@ export const formacoes = [
         url: "https://cursos.alura.com.br/user/rafael16gsm/degree-html-css-527396/certificate"
     },
     {
-        name: "Iniciante em Programação (Alura)",
-        url: "https://cursos.alura.com.br/degree/certificate/c128bab3-0972-4405-8db1-3b3dbfcdbe0c"
+        name: "Desenvolva aplicações Web com JavaScript",
+        url: "https://cursos.alura.com.br/user/rafael16gsm/degree-javascript-front-end-374365/certificate"
+    },
+    {
+        name: "Full stack JavaScript: crie um projeto com React e Node.js",
+        url: "https://cursos.alura.com.br/user/rafael16gsm/degree-full-stack-react-node-js-455268/certificate"
     }
 ]

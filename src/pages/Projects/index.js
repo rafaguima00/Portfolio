@@ -1,20 +1,19 @@
-import '../../App.css'
-import './projetos.css'
 import { projetos } from './mocks/projetos';
+import { Container, Projeto, ImagemProjeto, TextoProjeto } from './estilo'
 
 const Projetos = () => {
     return (
-        <section className="ProjContent">
+        <Container>
             {projetos.map((item, index) => (
-                <a key={index} href={item.url} target='_blank' className='ListaItens'>
-                    <img src={item.image} alt={item.nome} />
-                    <div className='ConteudoProjeto'>
-                        <h2>{item.nome}</h2>
+                <Projeto key={index} href={item.url} target='_blank'>
+                    <ImagemProjeto src={item.image} alt={item.nome} />
+                    <TextoProjeto>
+                        <h1>{item.nome}</h1>
                         <p>{item.descricao}</p>
-                    </div>
-                </a>
+                    </TextoProjeto>
+                </Projeto>
             ))}
-        </section>
+        </Container>
     )
 }
 

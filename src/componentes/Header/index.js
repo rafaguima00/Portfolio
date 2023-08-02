@@ -1,36 +1,37 @@
-import './header.css'
+import './estilos/header.css'
 import { Link } from 'react-router-dom'
+import { BarraNavegacao, Lista } from './estilos/estilo'
 
 const Header = () => {
 
   const links = [
     {
       name: "Home",
-      path: "/"
+      path: ""
     },
     {
       name: "Currículo",
-      path: "/curriculo"
+      path: "curriculo"
     },
     {
       name: "Projetos",
-      path: "/projects"
+      path: "projects"
     },
   ]
 
     return (
-        <nav className='navBar'>
-            <ul>
+        <BarraNavegacao>
+            <Lista>
                 {links.map((item, index) => <li key={index}>
                     <Link
-                        to={item.path}
+                        to={`${item.path}`}
                         className='linkPage'
                     >
                         {item.name}
                     </Link>
                 </li>)}
-            </ul>
-        </nav>
+            </Lista>
+        </BarraNavegacao>
     )
 }
 

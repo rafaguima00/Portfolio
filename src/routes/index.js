@@ -7,11 +7,7 @@ const Rotas = () => {
   return <>
     <Routes>
       <Route index path="/" element={<Home />} />
-    </Routes>
-    <Routes>
       <Route path="/curriculo" element={<Curriculo />} />
-    </Routes>
-    <Routes>
       <Route path="/projects" element={<Projetos />} />
     </Routes>
   </>

@@ -1,48 +1,50 @@
-import './curriculo.css'
 import { objetivo, experiencia, formacoes } from './mocks/mockCurriculo'
+import { CvContent, Dados, Lista, ItemLista, Email, Formacao, LinkFormacao } from "./estilos"
 
 const Curriculo = () => {
     return (
-        <div className='CvContent'>
-            <div className='Dados'>
-                <h2 className='TituloCurriculo'>Meu currículo</h2>
-                <ul className='ListaDados'>
-                    <li>
+        <CvContent>
+            <Dados>
+                <h2>Meu currículo</h2>
+                <Lista>
+                    <ItemLista>
                         Rafael Guimarães da Silva Moreira
-                    </li>
-                    <li>
+                    </ItemLista>
+                    <ItemLista>
                         Tel.: (71) 3012-6626
-                    </li>
-                    <li>
+                    </ItemLista>
+                    <ItemLista>
                         Celular: (71) 99663-4247
-                    </li>
-                    <li>
-                        Email: <a className='EmailUser' href='mailto:rafael16gsm@gmail.com'>
+                    </ItemLista>
+                    <ItemLista>
+                        Email: <Email href='mailto:rafael16gsm@gmail.com'>
                             rafael16gsm@gmail.com
-                        </a>
-                    </li>
-                </ul>
-            </div>
-            <div className='Dados'>
+                        </Email>
+                    </ItemLista>
+                </Lista>
+            </Dados>
+            <Dados>
                 <h2>Objetivo</h2>
                 <p>{objetivo}</p>
-            </div>
-            <div className='Dados'>
+            </Dados>
+            <Dados>
                 <h2>Experiências</h2>
                 <p>{experiencia}</p>
-            </div>
-            <div className='Dados'>
+            </Dados>
+            <Dados>
                 <h2>Formações</h2>
-                <div className='Formacoes'>
-                    <p>Análise e Desenvolvimento de Sistemas - Faculdade Visconde de Cairu (Cursando)</p>
+                <div>
+                    <Formacao>Análise e Desenvolvimento de Sistemas - Faculdade Visconde de Cairu (Cursando)</Formacao>
                     {
                         formacoes.map((item, index) => (
-                            <a key={index} href={item.url} target='_blank'>{item.name}</a>
+                            <LinkFormacao key={index} href={item.url} target='_blank'>
+                                {item.name}
+                            </LinkFormacao>
                         ))
                     }
                 </div>
-            </div>
-        </div>
+            </Dados>
+        </CvContent>
     )
 }
 

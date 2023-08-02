@@ -1,9 +1,0 @@
-.rodape {
-    background-color: var(--bg-navBar);
-    color: var(--font-color);
-}
-
-.rodape p {
-    text-align: center;
-    padding: 2.5rem;
-}

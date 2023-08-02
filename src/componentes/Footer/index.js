@@ -1,10 +1,10 @@
-import './footer.css'
+import { FooterComponent } from "./estilos";
 
 const Footer = () => {
     return (
-        <div className='rodape'>
+        <FooterComponent>
             <p>© Desenvolvido por Rafael Moreira</p>
-        </div>
+        </FooterComponent>
     )
 }
 
