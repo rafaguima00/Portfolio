@@ -1,27 +1,38 @@
 import styled from 'styled-components'
 import { tema } from '../../estilosGlobal'
+import laptop from '../../imagens/laptop.jpg'
 
-const { barraNavegacao, corTextoMarcado, corTexto } = tema;
+const { backgroundBarraNavegacao, corTextoMarcado, corTexto } = tema;
 
 const Container = styled.div`
     color: ${corTexto};
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: center;
-    align-items: flex-start;
-    gap: 2.6rem;
-    margin: 0 16rem;
-    padding: 2rem;
+    align-items: center;
+    padding: 2rem 16rem;
+    position: relative;
+    opacity: 1;
+    zIndex: -1;
+    background-image: url(${laptop});
+    background-position: 80% 80%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+
+    &:after {
+        background: linear-gradient()
+    }
 `
 
 const Content = styled.div`
     display: flex;
-    flex-direction: column;
-
-    p {
-        text-align: justify;
-        font-size: 18px;
-    }
+    flex-direction: row;
+    align-items: center;
+    gap: 1.3rem;
+    background-color: ${backgroundBarraNavegacao};
+    padding: 2rem;
+    border-radius: 16px;
 `
 
 const Titulo = styled.h2`
@@ -33,49 +44,21 @@ const Titulo = styled.h2`
 
 `
 
-const Redes = styled.div`
+const Texto = styled.section`
     display: flex;
     flex-direction: column;
-    align-items: center;
-    gap: .8rem;
-`
 
-const Links = styled.div`
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 1.2rem;
-
-    a {
-        color: ${corTexto};
-        font-size: 20px;
-        border: 2px solid ${corTextoMarcado};
-        border-radius: .5rem;
-        padding: 12px 1rem;
-        box-sizing: border-box;
-        width: 200px;
-        text-align: center;
-        transition: 300ms all;
-        display: flex;
-        flex-direction: row;
-        justify-content: center;
-        align-items: center;
-        gap: 10px;
-    }
-
-    a:hover {
-        transform: scale(1.05);
-        background-color: ${barraNavegacao};
-        color: ${corTextoMarcado};
+    p {
+        text-align: justify;
+        font-size: 18px;
     }
 `
 
 const Foto = styled.img`
     width: 280px;
     height: 280px;
-    margin-top: 5rem;
     border-radius: 1rem;
     border: 4px solid ${corTextoMarcado};
 `
 
-export { Container, Content, Titulo, Redes, Links, Foto }
+export { Container, Content, Texto, Titulo, Foto }

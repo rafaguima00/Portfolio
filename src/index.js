@@ -7,6 +7,10 @@ import { createGlobalStyle } from 'styled-components';
 const root = ReactDOM.createRoot(document.getElementById('root'));
 
 const GlobalStyle = createGlobalStyle`
+  html {
+    scroll-behavior: smooth;
+  }
+
   body {
     margin: 0;
     font-family: 'Montserrat', sans-serif;

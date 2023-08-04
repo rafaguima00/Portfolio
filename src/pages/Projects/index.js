@@ -1,9 +1,10 @@
 import { projetos } from './mocks/projetos';
-import { Container, Projeto, ImagemProjeto, TextoProjeto } from './estilo'
+import { Container, Titulo, Projeto, ImagemProjeto, TextoProjeto } from './estilo'
 
-const Projetos = () => {
+const Projetos = (props) => {
     return (
-        <Container>
+        <Container id={props.id}>
+            <Titulo>Projetos</Titulo>
             {projetos.map((item, index) => (
                 <Projeto key={index} href={item.url} target='_blank'>
                     <ImagemProjeto src={item.image} alt={item.nome} />

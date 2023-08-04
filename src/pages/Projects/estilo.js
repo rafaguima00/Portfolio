@@ -1,4 +1,8 @@
 import styled from 'styled-components'
+import code from '../../imagens/code.jpg'
+import { tema } from '../../estilosGlobal'
+
+const { backgroundBarraNavegacao } = tema;
 
 const Container = styled.section`
     color: #fff;
@@ -6,8 +10,17 @@ const Container = styled.section`
     flex-direction: column;
     justify-content: center;
     gap: 2.6rem;
-    margin: 0 16rem;
-    padding: 2rem;
+    padding: 1rem 16rem 2rem;
+    background-image: url(${code});
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 50% 50%;
+    background-attachment: fixed;
+`
+
+const Titulo = styled.h2`
+    text-align: center;
+    text-transform: uppercase;
 `
 
 const Projeto = styled.a`
@@ -17,6 +30,10 @@ const Projeto = styled.a`
     gap: 2rem;
     box-sizing: border-box;
     transition: 400ms all;
+    border: 2px solid #f4f4f4;
+    border-radius: 25px;
+    padding: 16px;
+    background-color: ${backgroundBarraNavegacao};
 
     &:hover {
         transform: scale(1.05);
@@ -43,4 +60,4 @@ const TextoProjeto = styled.div`
     }
 `
 
-export { Container, Projeto, ImagemProjeto, TextoProjeto }
+export { Container, Titulo, Projeto, ImagemProjeto, TextoProjeto }

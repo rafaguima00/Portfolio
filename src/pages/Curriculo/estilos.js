@@ -1,23 +1,46 @@
 import styled from 'styled-components'
+import { tema } from '../../estilosGlobal'
+
+const { corTextoMarcado, backgroundBarraNavegacao } = tema;
 
 const CvContent = styled.div`
+    background: ${backgroundBarraNavegacao};
     color: #fff;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    gap: 1rem;
-    margin: 0 16rem;
-    padding: 2rem;
+    gap: .5rem;
+    padding: 1rem 16rem;
+`
+
+const Titulo = styled.h2`
+    text-align: center;
+    text-transform: uppercase;
 `
 
 const Dados = styled.div`
     display: flex;
     flex-direction: column;
+    margin-top: 1rem;
 
     p{
         font-size: 18px;
         padding: 0;
         margin: 0;
+    }
+
+    h2 {
+        margin: 0;
+        margin-bottom: .5rem;
+        border-top: 1px solid #fff;
+        padding-top: .3rem;
+        font-size: 26px;
+    }
+
+    ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
     }
 `
 
@@ -38,20 +61,27 @@ const Email = styled.a`
     color: #2C9EC5;
 `
 
-const Formacao = styled.p`
-    padding-bottom: 12px;
+const Formacao = styled.li`
+    font-size: 18px;
+    list-style: none;
+    padding-bottom: 7px;
+`
+
+const ListaFormacao = styled.li`
+    list-style: none;
+    padding-bottom: 7px;
 `
 
 const LinkFormacao = styled.a`
-    display: block;
     color: #2C9EC5;
     margin: 4px 0;
-    box-sizing: border-box;
+    border-bottom: 2px solid transparent;
+    transition: 200ms all;
     font-size: 18px;
 
     &:hover {
-        text-decoration: underline;
+        border-bottom: 2px solid ${corTextoMarcado};
     }
 `
 
-export { CvContent, Dados, Lista, ItemLista, Email, Formacao, LinkFormacao }
+export { CvContent, Titulo, Dados, Lista, ItemLista, Email, Formacao, ListaFormacao, LinkFormacao }

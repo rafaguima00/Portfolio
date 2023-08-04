@@ -1,7 +1,6 @@
 import battleBotImage from '../../../../src/imagens/pagina-battle-bot.png'
 import tomJazzImage from '../../../../src/imagens/pagina-toms-jazz.png'
 import rickAndMortyImage from '../../../../src/imagens/pagina-rick-morty.png'
-import numeroSecretoImage from '../../../../src/imagens/pagina-num-secreto.png'
 
 export const projetos = [
     {
@@ -18,14 +17,8 @@ export const projetos = [
     },
     {
         nome: "Personagens de Rick and Morty",
-        descricao: "Consumindo API e apresentando todos os personagens da série Rick and Morty com Javascript puro",
+        descricao: "Consumindo API com requisição GET e apresentando todos os personagens da série Rick and Morty com Javascript puro",
         image: rickAndMortyImage,
         url: "https://personagens-rick-and-morty-eight.vercel.app/"
-    },
-    {
-        nome: "Número secreto",
-        descricao: "Projeto Número Secreto é um jogo que utiliza o reconhecimento de voz por meio da Web Speech API. Na inicialização da página é gerado um número aleatório e o usuário tem que adivinhar e falar pelo microfone do dispositivo até acertar o número secreto",
-        image: numeroSecretoImage,
-        url: "https://numero-secreto-two-beryl.vercel.app/"
-    },
+    }
 ]

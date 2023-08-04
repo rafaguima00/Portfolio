@@ -3,9 +3,13 @@
     color: var(--font-color);
     box-sizing: border-box;
     transition: 200ms all;
+    padding-bottom: 4px;
+    border-bottom: 2px solid transparent;
+    font-size: 21px;
+    text-transform: uppercase;
 }
 
 .linkPage:hover {
     color: #2C9EC5;
-    border-bottom: 1px solid #2C9EC5;
+    border-bottom: 2px solid #2C9EC5;
 }

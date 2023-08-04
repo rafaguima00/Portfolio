@@ -7,5 +7,5 @@ export const quemSouEu = `
 
 export const segundoParagrafo = `
     Atualmente, eu estou aprimorando meu conhecimento na área para atingir a meta de me tornar um 
-    desenvolvedor full stack trabalhando com tecnologias como Typescript, React, Node e MySQL
+    desenvolvedor full stack trabalhando com tecnologias como Typescript, React e NodeJS
 `
